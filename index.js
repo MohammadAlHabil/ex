@@ -3,6 +3,19 @@ const installButton = prompt.querySelector('.prompt__install');
 const closeButton = prompt.querySelector('.prompt__close');
 let installEvent;
 
+if('serviceWorker' in navigator) {
+
+  navigator.serviceWorker.register('sw.js').then(function(registration) {
+    console.log('Service worker  registrado com sucesso:', registration);
+    // request_debug(registration);
+
+  }).catch(function(error) {
+    console.log('Falha ao Registrar o Service Worker:', error);
+    // request_debug(error);
+
+  });
+}
+
 function getVisited() {
   return localStorage.getItem('install-prompt');
 }
