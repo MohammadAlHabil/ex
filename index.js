@@ -70,5 +70,9 @@ if ("BeforeInstallPromptEvent" in window) {
   });
 }
 
+window.addEventListener("appinstalled", (evt) => {
+  app.logEvent('a2hs', 'installed');
+});
+
 if ("standalone" in navigator)
   alert("iOS Safari-style PWA Add-to-HomeScreen maybe supported!");
