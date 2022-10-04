@@ -11,6 +11,7 @@ function setVisited() {
   localStorage.setItem('install-prompt', true);
 }
 
+if ("BeforeInstallPromptEvent" in window){
 // this event will only fire if the user does not have the pwa installed
 window.addEventListener('beforeinstallprompt', (event) => {
   event.preventDefault();
@@ -24,6 +25,8 @@ window.addEventListener('beforeinstallprompt', (event) => {
     installEvent = event;
   }
 });
+alert("Chrome-style PWA install experience supported!");
+}
 
 installButton.addEventListener('click', () => {
   // hide the prompt banner
@@ -53,3 +56,6 @@ closeButton.addEventListener('click', () => {
 
   installEvent = null;
 });
+
+if ("standalone" in navigator)
+  alert("iOS Safari-style PWA Add-to-Homescreen maybe supported!");
