@@ -23,9 +23,9 @@ window.addEventListener('beforeinstallprompt', (event) => {
 
     // store the event for later use
     installEvent = event;
+    alert("Chrome-style PWA install experience supported!");
   }
 });
-alert("Chrome-style PWA install experience supported!");
 }
 
 installButton.addEventListener('click', () => {

@@ -5,8 +5,8 @@
   "scope": "/",
   "start_url": ".",
   "name": "PWA-A2HS",
-  "short_name": "PWA",
   "description": "Demo PWA for A2HS feature",
+  "short_name": "PWA",
   "icons": [
     {
         "src": "img.svg",
