@@ -1,0 +1,17 @@
+{
+  "theme_color": "#f69435",
+  "background_color": "#f69435",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": ".",
+  "name": "PWA-A2HS",
+  "short_name": "PWA",
+  "description": "Demo PWA for A2HS feature",
+  "icons": [
+    {
+        "src": "img.svg",
+        "sizes": "192x192",
+        "type": "image/svg"
+    }
+]
+}
