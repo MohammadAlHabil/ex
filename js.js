@@ -1,6 +1,6 @@
 let deferredPrompt;
 const addBtn = document.querySelector("#add-button");
-addBtn.style.display = "none";
+// addBtn.style.display = "none";
 
 if('BeforeInstallPromptEvent' in window)
     alert('Chrome-style PWA install experience supported!');
