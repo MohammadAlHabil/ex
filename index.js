@@ -81,11 +81,13 @@ if ("BeforeInstallPromptEvent" in window) {
       alert("Chrome-style PWA install experience supported!");
     }
   });
+} else {
+  alert("Chrome-style PWA install experience not supported!");
 }
 
-window.addEventListener("appinstalled", (evt) => {
-  app.logEvent('a2hs', 'installed');
-});
+// window.addEventListener("appinstalled", (evt) => {
+//   app.logEvent('a2hs', 'installed');
+// });
 
 if ("standalone" in navigator)
   alert("iOS Safari-style PWA Add-to-HomeScreen maybe supported!");
