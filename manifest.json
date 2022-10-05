@@ -7,9 +7,14 @@
       "src": "img.svg",
       "sizes": "192x192",
       "type": "image/svg+xml"
+    },
+    {
+      "src": "img.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ],
-  "start_url": "/ex",
+  "start_url": "/as/",
   "display": "standalone",
   "theme_color": "#f69435",
   "background_color": "#f69435"

@@ -3,18 +3,31 @@ const installButton = prompt.querySelector(".prompt__install");
 const closeButton = prompt.querySelector(".prompt__close");
 let installEvent;
 
-if ("serviceWorker" in navigator) {
-  navigator.serviceWorker
-    .register("sw.js")
-    .then(function (registration) {
-      console.log("Service worker good", registration);
-      // request_debug(registration);
-    })
-    .catch(function (error) {
-      console.log("Failed Registrar Service Worker:", error);
-      // request_debug(error);
-    });
-}
+localStorage.clear();
+window.onload = () => {
+  "use strict";
+
+  if('serviceWorker' in navigator){
+    try {
+      navigator.serviceWorker.register('sw.js');
+      console.log("Service Worker Registered");
+    } catch (error) {
+      console.log("Service Worker Registration Failed");
+    }
+  }
+
+  // if ("serviceWorker" in navigator) {
+  // navigator.serviceWorker
+  //   .register("./sw.js")
+  //   .then(function (registration) {
+  //     console.log("Service worker good", registration);
+  //   })
+  //   .catch(function (error) {
+  //     console.log("Failed Registrar Service Worker:", error);
+  //   });
+};
+
+
 
 function getVisited() {
   return localStorage.getItem("install-prompt");
